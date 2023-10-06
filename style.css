@@ -34,12 +34,21 @@ main {
 }
 
 .card {
-  background-color: black;
+  background-color: white;
   height: 300px;
   width: 400px;
   margin: 10px;
+  position: relative;
 }
 
-.card:nth-child(2) {
-  background-color: yellow;
+img {
+  position: absolute;
+  height: 200px;
+  width: 400px;
+}
+
+.card_contents {
+  position: absolute;
+  top: 200px;
+  padding-left: 10px;
 }
