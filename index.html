@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velog</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>velog</h1>
+      <div class="icons">
+        <span class="material-symbols-outlined" size="xl"> sunny </span>
+        <span class="material-symbols-outlined"> search </span>
+        <span id="newPost">새 글 작성</span>
+        <span id="profile">
+          <span><img src="img/profile.jpg" /></span>
+          <span class="material-symbols-outlined"> arrow_drop_down </span></span
+        >
+      </div>
+    </header>
+
+    <div class="menuBar">
+      <div class="menuBar_left">
+        <div class="navBox">
+          <nav class="navbar">
+            <span class="material-symbols-outlined"> show_chart </span>
+            <a href="#">트렌딩</a>
+          </nav>
+          <nav class="navbar">
+            <span class="material-symbols-outlined"> schedule </span>
+            <a href="#">최신</a>
+          </nav>
+        </div>
+        <div class="dropDown">
+          <span>이번 주</span>
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </div>
+      </div>
+      <div class="menuBar_right">
+        <span class="material-symbols-outlined"> more_vert </span>
+      </div>
+    </div>
+
+    <main>
+      <div class="card">
+        <img src="img/강아지.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">힙한 강아지</h3>
+          <span class="card_contents_text"
+            >안녕하세요? 저는 강아지입니다. 저는 선글라스 끼고 드라이브하는 것을
+            제일 좋아해요. 이 사진은 날씨 좋은 날 찍은 사진입니다. 저 좀
+            귀엽죠</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 25일&nbsp;·&nbsp;</span>
+            <span>33개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/dogprofile.jpg" />
+              <span>by HOTDOG</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>47</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/햄스터.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">쪼꼬미 햄스터</h3>
+          <span class="card_contents_text"
+            >저는 엄청 작아서 제 목소리가 안 들릴 수도 있어요! 하지만 작은 만큼
+            엄청 귀엽답니다. 저는 하트 눌러주는 걸 좋아해서 많이 눌러주셨으면
+            좋겠어요!</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 20일&nbsp;·&nbsp;</span>
+            <span>2개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/hamsterprofile.png" />
+              <span>by Hamzzi</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>129</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/고양이.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">미묘입니다</h3>
+          <span class="card_contents_text"
+            >사진을 봐도 알 수 있듯이 저는 미묘에요. 제가 세상에서 제일 예쁨.
+            반박 댓글 안 받음.</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 31일&nbsp;·&nbsp;</span>
+            <span>1716개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/catprofile.jpg" />
+              <span>by kitty</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>100,291</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/강아지.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">힙한 강아지</h3>
+          <span class="card_contents_text"
+            >안녕하세요? 저는 강아지입니다. 저는 선글라스 끼고 드라이브하는 것을
+            제일 좋아해요. 이 사진은 날씨 좋은 날 찍은 사진입니다. 저 좀
+            귀엽죠</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 25일&nbsp;·&nbsp;</span>
+            <span>33개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/dogprofile.jpg" />
+              <span>by HOTDOG</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>47</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/햄스터.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">쪼꼬미 햄스터</h3>
+          <span class="card_contents_text"
+            >저는 엄청 작아서 제 목소리가 안 들릴 수도 있어요! 하지만 작은 만큼
+            엄청 귀엽답니다. 저는 하트 눌러주는 걸 좋아해서 많이 눌러주셨으면
+            좋겠어요!</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 20일&nbsp;·&nbsp;</span>
+            <span>2개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/hamsterprofile.png" />
+              <span>by Hamzzi</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>129</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/고양이.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">미묘입니다</h3>
+          <span class="card_contents_text"
+            >사진을 봐도 알 수 있듯이 저는 미묘에요. 제가 세상에서 제일 예쁨.
+            반박 댓글 안 받음.</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 31일&nbsp;·&nbsp;</span>
+            <span>1716개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/catprofile.jpg" />
+              <span>by kitty</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>100,291</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/강아지.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">힙한 강아지</h3>
+          <span class="card_contents_text"
+            >안녕하세요? 저는 강아지입니다. 저는 선글라스 끼고 드라이브하는 것을
+            제일 좋아해요. 이 사진은 날씨 좋은 날 찍은 사진입니다. 저 좀
+            귀엽죠</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 25일&nbsp;·&nbsp;</span>
+            <span>33개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/dogprofile.jpg" />
+              <span>by HOTDOG</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>47</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/햄스터.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">쪼꼬미 햄스터</h3>
+          <span class="card_contents_text"
+            >저는 엄청 작아서 제 목소리가 안 들릴 수도 있어요! 하지만 작은 만큼
+            엄청 귀엽답니다. 저는 하트 눌러주는 걸 좋아해서 많이 눌러주셨으면
+            좋겠어요!</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 20일&nbsp;·&nbsp;</span>
+            <span>2개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/hamsterprofile.png" />
+              <span>by Hamzzi</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>129</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/고양이.jpg" />
+        <div class="card_contents">
+          <h3 class="card_contents_title">미묘입니다</h3>
+          <span class="card_contents_text"
+            >사진을 봐도 알 수 있듯이 저는 미묘에요. 제가 세상에서 제일 예쁨.
+            반박 댓글 안 받음.</span
+          >
+          <div class="card_contents_info1">
+            <span>2023년 10월 31일&nbsp;·&nbsp;</span>
+            <span>1716개의 댓글</span>
+          </div>
+          <div class="card_contents_info2">
+            <div class="card_contents_info2_writer">
+              <img src="img/catprofile.jpg" />
+              <span>by kitty</span>
+            </div>
+            <div class="card_contents_info2_heart">
+              <span id="heart" class="material-symbols-outlined">
+                favorite
+              </span>
+              <span>100,291</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
