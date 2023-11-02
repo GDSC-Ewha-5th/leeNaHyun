@@ -19,7 +19,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
 
 .menuBar {
@@ -44,14 +44,32 @@ header {
   align-items: center;
 }
 
-.dropDown {
-  height: 35px;
-  width: 90px;
-  background-color: whitesmoke;
+.navbar > span {
+  font-size: 30px;
+  padding-right: 7px;
 }
 
-.navbar > span {
-  padding-right: 7px;
+.navbar > a {
+  font-size: 25px;
+}
+
+.dropDown {
+  height: 35px;
+  width: 120px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dropDown > span {
+  text-align: center;
+  font-size: 20px;
+}
+
+.dropDown > .material-symbols-outlined {
+  font-size: 25px;
 }
 
 .menuBar_right {
