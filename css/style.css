@@ -54,22 +54,50 @@ header {
 }
 
 .dropDown {
-  height: 35px;
-  width: 120px;
-  background-color: whitesmoke;
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-  align-items: center;
+  position: relative;
 }
 
-.dropDown > span {
+.dropDown_clickable {
+  height: 35px;
+  width: 115px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.dropDown_clickable > span {
   text-align: center;
   font-size: 20px;
 }
 
-.dropDown > .material-symbols-outlined {
+.dropDown_clickable > .material-symbols-outlined {
   font-size: 25px;
+}
+
+.dropDown_content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.dropDown_content > span {
+  background-color: whitesmoke;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 95px;
+}
+
+.dropDown_content > span:nth-child(1) {
+  border-top: 3px solid lightgrey;
+}
+.dropDown_content > span:nth-child(4) {
+  border-bottom: 0;
 }
 
 .menuBar_right {
