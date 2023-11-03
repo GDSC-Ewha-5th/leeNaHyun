@@ -123,6 +123,7 @@ main {
   justify-content: space-between;
   padding: 10px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .icons {
@@ -190,6 +191,8 @@ main {
   position: absolute;
   top: 220px;
   padding: 15px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .card_contents_title {
@@ -246,4 +249,29 @@ main {
 
 .card_contents_info2_heart > #heart {
   font-size: 15px;
+}
+
+.modal {
+  z-index: 2;
+  background-color: white;
+  height: 180px;
+  width: 320px;
+  margin: 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50px;
+}
+
+.modal > img {
+  position: absolute;
+  height: 100px;
+  width: 320px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal_background {
+  width: 100%;
+  height: 100%;
+  background-color: black;
 }
