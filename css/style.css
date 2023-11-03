@@ -110,6 +110,10 @@ header {
   border-bottom-right-radius: 5px;
 }
 
+.dropDown_content_clicked {
+  color: purple;
+}
+
 .menuBar_right {
   padding: 10px;
 }
