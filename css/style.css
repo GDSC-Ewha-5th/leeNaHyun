@@ -82,22 +82,32 @@ header {
   position: absolute;
   z-index: 1;
   display: none;
+  right: 0px;
+  border-top: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
-.dropDown_content > span {
+.dropDown_content > a {
   background-color: whitesmoke;
   font-size: 20px;
-  padding: 7px 10px;
+  padding: 15px;
   border-bottom: 1px solid lightgrey;
-  border-radius: 5px;
-  width: 95px;
+  width: 200px;
+  height: 20px;
+  align-items: center;
 }
 
-.dropDown_content > span:nth-child(1) {
-  border-top: 3px solid lightgrey;
+.dropDown_content :first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-.dropDown_content > span:nth-child(4) {
-  border-bottom: 0;
+
+.dropDown_content :last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .menuBar_right {
