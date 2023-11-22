@@ -1,5 +1,6 @@
 export function createModal() {
   const card = document.querySelectorAll(".card");
+  let index;
   for (let i = 0; i < card.length; i++) {
     card[i].addEventListener("click", () => {
       const modalBg = document.createElement("div");
@@ -12,6 +13,7 @@ export function createModal() {
       const modal = document.createElement("div");
       modalBg.appendChild(modal);
       modal.setAttribute("class", "card modal");
+      modal.innerHTML = card[i].innerHTML;
 
       const closeBtn = document.createElement("span");
       modalBg.appendChild(closeBtn);
