@@ -1,3 +1,5 @@
+import { createModal } from "./modal.js";
+
 const dropDownClickable = document.querySelector(".dropDown_clickable");
 const dropDownSelected = document.querySelector(".dropDown_clickable span");
 const dropDownContent = document.querySelector(".dropDown_content");
@@ -48,3 +50,9 @@ dropDownContents.forEach((content) => {
 dropDownContents.forEach((content) => {
   content.addEventListener("click", handleContentClick);
 });
+
+function main() {
+  createModal();
+}
+
+window.addEventListener("load", main);

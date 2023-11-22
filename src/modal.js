@@ -1,13 +1,13 @@
-const card = document.querySelector(".card");
+export function createModal() {
+  const card = document.querySelectorAll(".card");
+  for (let i = 0; i < card.length; i++) {
+    card[i].addEventListener("click", () => {
+      const modal = document.createElement("div");
+      document.body.appendChild(modal);
+      modal.setAttribute("class", "modal_background");
 
-function createModal() {
-  const background = document.createElement("div");
-  background.setAttribute("class", "modal_background");
+      const body = document.querySelector("body");
+      body.className += "scroll_hidden";
+    });
+  }
 }
-
-function handleClick() {
-  createModal();
-  console.log("hi");
-}
-
-card.addEventListener("click", handleClick);
