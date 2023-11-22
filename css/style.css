@@ -260,8 +260,28 @@ main {
   top: 0;
   position: fixed;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .scroll_hidden {
   overflow: hidden;
+}
+
+.modal {
+  z-index: 5;
+}
+
+.modal_closeBtn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
