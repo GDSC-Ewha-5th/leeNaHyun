@@ -1,30 +1,22 @@
 const input = document.querySelector(".input");
 
-let tagArr = [];
-
-function isExist(value) {
-  for (let i = 0; i < tagArr.length; i++) {
-    if (value == tagArr[i]) return true;
-  }
-  return false;
-}
-
-function deleteTag(event) {
-  event.currentTarget.par;
-}
+let tagArr = new Set();
 
 function addTag(event) {
   if (event.key === "Enter") {
-    if (!isExist(event.target.value)) {
+    if (tagArr.has(event.target.value)) {
+      event.target.value = "";
+    } else {
       const newTag = document.createElement("span");
+      tagArr.add(event.target.value);
       newTag.innerText = event.target.value;
       document.body.insertBefore(newTag, input);
-      tagArr.push(event.target.value);
+
       newTag.addEventListener("click", () => {
         newTag.remove();
       });
+      event.target.value = "";
     }
-    event.target.value = "";
   }
 }
 
