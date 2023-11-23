@@ -16,14 +16,10 @@ function handleClikableClick() {
   }
 }
 
-function handleMouseenter(event) {
+function handleMouseEnterLeave(event, isEntering) {
   let selected = event.currentTarget;
-  selected.style.backgroundColor = "lightgrey";
-}
-
-function handleMouseleave(event) {
-  let selected = event.currentTarget;
-  selected.style.backgroundColor = "whitesmoke";
+  selected.classList.toggle("hovered", isEntering);
+  console.log(selected);
 }
 
 let clicked = dropDownContents[1];
@@ -40,11 +36,10 @@ function handleContentClick(event) {
 dropDownClickable.addEventListener("click", handleClikableClick);
 
 dropDownContents.forEach((content) => {
-  content.addEventListener("mouseenter", handleMouseenter);
-});
-
-dropDownContents.forEach((content) => {
-  content.addEventListener("mouseleave", handleMouseleave);
+  content.addEventListener("mouseenter", (e) => handleMouseEnterLeave(e, true));
+  content.addEventListener("mouseleave", (e) =>
+    handleMouseEnterLeave(e, false)
+  );
 });
 
 dropDownContents.forEach((content) => {

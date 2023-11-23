@@ -285,3 +285,7 @@ main {
   justify-content: center;
   font-size: 30px;
 }
+
+.hovered {
+  background-color: lightgrey;
+}
