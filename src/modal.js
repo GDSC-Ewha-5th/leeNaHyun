@@ -1,30 +1,58 @@
 export function createModal() {
-  const card = document.querySelectorAll(".card");
-  let index;
-  for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener("click", () => {
-      const modalBg = document.createElement("div");
-      document.body.appendChild(modalBg);
-      modalBg.setAttribute("class", "modal_background");
+  const cards = document.querySelectorAll(".card");
 
-      const body = document.querySelector("body");
-      body.classList.add("scroll_hidden");
-
-      const modal = document.createElement("div");
-      modalBg.appendChild(modal);
-      modal.setAttribute("class", "card modal");
-      modal.innerHTML = card[i].innerHTML;
-
-      const closeBtn = document.createElement("span");
-      modalBg.appendChild(closeBtn);
-      closeBtn.setAttribute("class", "modal_closeBtn");
-      closeBtn.innerText = "X";
-      closeBtn.addEventListener("click", () => {
-        body.classList.remove("scroll_hidden");
-        modalBg.remove();
-        modal.remove();
-        closeBtn.remove();
-      });
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      createModalWindow(card);
     });
+  });
+}
+
+function createModalWindow(card) {
+  const modalBg = createModalBackground();
+  const modal = createModalContent(card);
+  const closeBtn = createCloseButton();
+
+  toggleScrollHidden(true);
+
+  document.body.appendChild(modalBg);
+  modalBg.appendChild(modal);
+  modalBg.appendChild(closeBtn);
+}
+
+function createModalBackground() {
+  const modalBg = document.createElement("div");
+  modalBg.setAttribute("class", "modal_background");
+  return modalBg;
+}
+
+function createModalContent(card) {
+  const modal = document.createElement("div");
+  modal.setAttribute("class", "card modal");
+  modal.innerHTML = card.innerHTML;
+  return modal;
+}
+
+function createCloseButton() {
+  const closeBtn = document.createElement("span");
+  closeBtn.setAttribute("class", "modal_closeBtn");
+  closeBtn.innerText = "X";
+
+  closeBtn.addEventListener("click", () => {
+    const modalBg = document.querySelector(".modal_background");
+    modalBg.remove();
+    toggleScrollHidden(false);
+  });
+
+  return closeBtn;
+}
+
+function toggleScrollHidden(enable) {
+  const body = document.querySelector("body");
+  if (enable) {
+    //scroll hidden을 하겠다
+    body.classList.add("scroll_hidden");
+  } else {
+    body.classList.remove("scroll_hidden");
   }
 }
