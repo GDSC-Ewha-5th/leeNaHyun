@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 function NavBar() {
   return (
     <>
@@ -5,11 +7,11 @@ function NavBar() {
         <div>
           <div>
             <nav>
-              <span className="material-symbols-outlined"> show_chart </span>
+              <Icon className="material-symbols-outlined"> show_chart </Icon>
               <a href="#">트렌딩</a>
             </nav>
             <nav>
-              <span className="material-symbols-outlined"> schedule </span>
+              <Icon className="material-symbols-outlined"> schedule </Icon>
               <a href="#">최신</a>
             </nav>
           </div>
@@ -38,5 +40,9 @@ function NavBar() {
     </>
   );
 }
+
+const Icon = styled.span`
+  font-size: 35px;
+`;
 
 export default NavBar;
