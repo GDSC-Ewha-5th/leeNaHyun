@@ -28,6 +28,7 @@ const DropDownContents = styled.a`
   align-items: center;
   &:hover {
     color: purple;
+    background-color: lightgray;
   }
 `;
 
