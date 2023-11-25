@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState } from "react";
+import ShowDropDown from "./ShowDropDown";
 
 const NavBlock = styled.div`
   display: flex;
@@ -29,7 +31,9 @@ const CardNav = styled.div`
   }
 `;
 
-const DropDown = styled.div``;
+const DropDown = styled.div`
+  position: relative;
+`;
 const SeenDropDown = styled.div`
   display: flex;
   align-items: center;
@@ -50,16 +54,12 @@ const SeenDropDown = styled.div`
     padding-right: 0px;
   }
 `;
-const HiddenDropDown = styled.div`
-  display: flex;
-  flex-direction: column;
-  //다루기
-  display: none;
-`;
 
 const Right = styled.div``;
 
 function NavBar() {
+  const [view, setView] = useState(false);
+
   return (
     <>
       <NavBlock>
@@ -75,21 +75,14 @@ function NavBar() {
             </nav>
           </CardNav>
           <DropDown>
-            <SeenDropDown>
+            <SeenDropDown onClick={() => setView(!view)}>
               <h3>이번 주</h3>
               <span className="material-symbols-outlined">
                 {" "}
                 arrow_drop_down{" "}
               </span>
             </SeenDropDown>
-            <HiddenDropDown>
-              <a href="#">오늘</a>
-              <a className="dropDown_content_clicked" href="#">
-                이번 주
-              </a>
-              <a href="#">이번 달</a>
-              <a href="#">올해</a>
-            </HiddenDropDown>
+            {view && <ShowDropDown />}
           </DropDown>
         </Left>
         <Right>

@@ -1,5 +1,4 @@
 // import { useState } from "react";
-import React from "react";
 import { createGlobalStyle } from "styled-components";
 
 import Header from "./component/Header";
