@@ -43,6 +43,7 @@ const Box1 = styled.div`
 
 const Text = styled.span`
   font-size: 25px;
+  padding-left: 10px;
 `;
 
 const DropDown = styled.span``;
