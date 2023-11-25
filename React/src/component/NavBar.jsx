@@ -1,57 +1,103 @@
 import styled from "styled-components";
 
+const NavBlock = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+`;
+
+const Left = styled.div`
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 30px;
+    padding-right: 7px;
+  }
+  a {
+    font-size: 25px;
+  }
+`;
+const CardNav = styled.div`
+  display: flex;
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+`;
+
+const DropDown = styled.div``;
+const SeenDropDown = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  width: 95px;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0px 10px;
+
+  h3 {
+    font-size: 20px;
+  }
+  span {
+    font-size: 25px;
+    padding-right: 0px;
+  }
+`;
+const HiddenDropDown = styled.div`
+  display: flex;
+  flex-direction: column;
+  //다루기
+  display: none;
+`;
+
+const Right = styled.div``;
+
 function NavBar() {
   return (
     <>
-      <Container>
-        <Box1>
-          <Icon className="material-symbols-outlined"> show_chart </Icon>
-          <Text>트렌딩</Text>
-
-          <Icon className="material-symbols-outlined"> schedule </Icon>
-          <Text>최신</Text>
-
-          <Text>이번 주</Text>
-          <Icon className="material-symbols-outlined"> arrow_drop_down </Icon>
+      <NavBlock>
+        <Left>
+          <CardNav>
+            <nav>
+              <span className="material-symbols-outlined"> show_chart </span>
+              <a href="#">트렌딩</a>
+            </nav>
+            <nav>
+              <span className="material-symbols-outlined"> schedule </span>
+              <a href="#">최신</a>
+            </nav>
+          </CardNav>
           <DropDown>
-            <Text>오늘</Text>
-            <Text className="dropDown_content_clicked" href="#">
-              이번 주
-            </Text>
-            <Text href="#">이번 달</Text>
-            <Text href="#">올해</Text>
+            <SeenDropDown>
+              <h3>이번 주</h3>
+              <span className="material-symbols-outlined">
+                {" "}
+                arrow_drop_down{" "}
+              </span>
+            </SeenDropDown>
+            <HiddenDropDown>
+              <a href="#">오늘</a>
+              <a className="dropDown_content_clicked" href="#">
+                이번 주
+              </a>
+              <a href="#">이번 달</a>
+              <a href="#">올해</a>
+            </HiddenDropDown>
           </DropDown>
-        </Box1>
-        <Box2>
-          <Icon className="material-symbols-outlined"> more_vert </Icon>
-        </Box2>
-      </Container>
+        </Left>
+        <Right>
+          <span className="material-symbols-outlined"> more_vert </span>
+        </Right>
+      </NavBlock>
     </>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 10px;
-`;
-
-const Box1 = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Text = styled.span`
-  font-size: 25px;
-  padding-left: 10px;
-`;
-
-const DropDown = styled.span``;
-
-const Box2 = styled.div``;
-
-const Icon = styled.span`
-  font-size: 35px;
-`;
 
 export default NavBar;

@@ -5,6 +5,8 @@ const HeadBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 70px;
+
   h1 {
     font-size: 45px;
   }
