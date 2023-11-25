@@ -1,0 +1,29 @@
+@import "reset.css";
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  font-family: "Gaegu", sans-serif;
+  align-items: center;
+}
+
+.input {
+  outline: none;
+  border: none;
+  font-family: "Gaegu", sans-serif;
+  font-size: 20px;
+}
+
+span {
+  margin-right: 7px;
+  margin-bottom: 7px;
+  background-color: #ebddf5;
+  height: 20px;
+  width: auto;
+  padding: 13px;
+  border-radius: 15px;
+  text-align: center;
+  color: grey;
+  font-size: 20px;
+}
